@@ -49,12 +49,12 @@ def SortSource(files, extension, sourceDir):
 
                 if not moveAll:
                     if choice == "Yes":
-                        os.rename(filePath, sourceDir + "/" + extension.replace(".","") + "/" + fileName)
+                        os.rename(filePath, movingTo)
                     elif choice == "Yes all":
                         moveAll = True
-                        os.rename(filePath, sourceDir + "/" + extension.replace(".","") + "/" + fileName)
+                        os.rename(filePath, movingTo)
                 elif moveAll:
-                    os.rename(filePath, sourceDir + "/" + extension.replace(".","") + "/" + fileName)
+                    os.rename(filePath, movingTo)
 
 
 def GetFiles(directory):
